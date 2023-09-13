@@ -1,0 +1,41 @@
+<h1>Directives Demo: ngFor</h1>
+
+<ul style="list-style:none">
+    <li *ngFor="let fruit of fruits" (click)="getData(fruit)"><a href="#">{{fruit}}</a></li>
+</ul>
+
+<h2>Selected Fruit : {{theFruit}}</h2>
+
+<h1>Directives Demo: ngIf</h1>
+<div *ngIf="isAdmin; then adminBlock;else userBlock"></div>
+
+<ng-template #adminBlock>
+    <div class="box">
+        <h1>Hello Admin</h1>
+        <h2> You are a priviledged User</h2>
+    </div>
+</ng-template>
+
+<ng-template #userBlock>
+    <div class="box">
+        <h1>Hello User</h1>
+        <h2 style="color:red"> You are a non priviledged User</h2>
+    </div>
+</ng-template>
+
+<hr>
+<div [ngSwitch]="color">
+<div *ngSwitchCase="'red'">Color RED Selected</div>
+<div *ngSwitchCase="'blue'">Color BLUE Selected</div>
+<div *ngSwitchCase="'green'">Color GREEN Selected</div>
+<div *ngSwitchCase="'yellow'">Color YELLOW Selected</div>
+<div *ngSwitchDefault>Select your Color</div>
+</div>
+
+<select (change)="onSelect(options.value)" #options>
+    <option value="red">red</option>
+    <option value="blue">blue</option>
+    <option value="green">green</option>
+    <option value="yellow">yellow</option>
+    
+</select>
