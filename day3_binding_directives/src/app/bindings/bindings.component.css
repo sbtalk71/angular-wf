@@ -1,0 +1,8 @@
+
+.failure{
+    border: 2px solid red;
+}
+
+.success{
+    border: 2px solid green;
+}

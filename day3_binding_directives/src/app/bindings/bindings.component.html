@@ -1,0 +1,16 @@
+<h1>Bindings Page</h1>
+
+<input type="text" id="t1" [class]="isDisabled?disabled:enabled" [disabled]="isDisabled" #inputData (keyup)="onChange(inputData.value)">
+
+<button (click)="toggle()" [class.failure]="isDisabled">toggle</button>
+<button (click)="getData(inputData.value)" style="border:5px solid blue;background-color:rgb(0, 179, 255);">Get Message</button>
+
+<h1>{{message}}</h1>
+
+<hr>
+<h2>Two Way Binding</h2>
+
+<input type="text" id="t2" [(ngModel)]="data">
+
+<h2>{{data}}</h2>
+

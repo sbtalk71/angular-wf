@@ -1,0 +1,10 @@
+<h1 class="box">{{title}}</h1>
+<h2>{{sayHello()}}</h2>
+<h2>{{(2+3)?4:"not Four"}}</h2>
+<h2>{{9+8+9}}</h2>
+<h2>My car Details {{car.model}} and {{car.year}}</h2>
+
+<input type="text" name="t1" #inputData>
+
+<button (click)="handleClick(inputData.value)">Get the Data</button>
+<h1>{{message}}</h1>
