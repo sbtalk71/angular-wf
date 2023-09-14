@@ -1,0 +1,20 @@
+.success{
+    color: green;
+}
+
+.error{
+    color: red;
+}
+
+.special{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.common{
+    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 50px;
+
+}

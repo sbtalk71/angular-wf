@@ -6,13 +6,19 @@ import { BindingsComponent } from './bindings/bindings.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { ContentComponent } from './content/content.component';
+import { AttrDirectivesComponent } from './attr-directives/attr-directives.component';
+import { HighlighterDirective } from './highlighter.directive';
+import { HighlighterclsDirective2 } from './highlighter2.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     BindingsComponent,
     DirectivesComponent,
-    ContentComponent
+    ContentComponent,
+    AttrDirectivesComponent,
+    HighlighterDirective,
+    HighlighterclsDirective2
   ],
   imports: [
     BrowserModule,
