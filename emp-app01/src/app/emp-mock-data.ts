@@ -1,6 +1,6 @@
 import { Emp } from "./emp"
 
-const empdata:Emp[]=[
+export const EMPDATA:Emp[]=[
     {id:100,name:'shantanu',salary:70000,location:'Hyderabad',email:'shantanu@gmail.com'},
     {id:101,name:'Pavan',salary:70000,location:'Hyderabad',email:'shantanu@gmail.com'},
     {id:102,name:'Ranga',salary:70000,location:'Hyderabad',email:'shantanu@gmail.com'},

@@ -1,0 +1,51 @@
+<h1>Student Registration Form</h1>
+<hr>
+<div style="margin-left:50px" >
+    <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
+        <div >
+            <label>Student Name</label>
+            <input  type="text" formControlName="studentName">
+            <small class="error-text" *ngIf="studentName.errors?.['required']&& studentName.touched">Invalid Name</small>
+            <small class="error-text" *ngIf="studentName.errors?.['illegalName']">Bob is illegal Name</small>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="email" formControlName="email" >
+            <small class="error-text" *ngIf="email.errors?.['required']||email.errors?.['email']">Invalid Mail</small>
+ 
+        </div>
+        <div>
+            <label>Mobile No</label>
+            <input type="text" formControlName="phone" >
+            
+        </div>
+        <div>
+            <label>Course Name</label>
+            <select name="courseName" formControlName="courseName">
+                <option value="">select Course</option>
+                <option *ngFor="let course of courses" value="{{course}}">{{course}}</option>
+            </select>
+        </div>
+        <div>
+            <label>Select Time Slot</label>
+            <input type="radio" name="slot" value="morning" formControlName="slot"><label>Morning Slot</label>
+            <input type="radio" name="slot" value="evening" formControlName="slot"><label>Evening Slot</label>
+        </div>
+        <div>
+            <label>Notify</label>
+            <input type="checkbox" name="notify" formControlName="notify">
+        </div>
+        <div formArrayName="references" *ngFor="let ref of references.controls; let i=index">
+            <label>referencec</label>
+            <input type="text" [formControlName]="i">
+            <button (click)="removeEmail(i)">X</button>
+        </div>
+        <div>
+            <button (click)="addEmail()" >Add Another Email</button>
+        </div>
+        <div>
+            <button >Register</button>
+        </div>
+    </form>
+
+</div>

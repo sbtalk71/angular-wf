@@ -1,1 +1,25 @@
-<p>emp-details works!</p>
+<div *ngIf="emp">
+    <h3>Employee Details</h3>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>empId</td>
+            <td>{{emp.id}}</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{emp.name}}</td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>{{emp.location}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{emp.email}}</td>
+        </tr>
+    </table>
+</div>

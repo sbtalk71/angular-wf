@@ -1,0 +1,42 @@
+<h1>Student Registration Form</h1>
+<hr>
+<div style="margin-left:50px" class="container">
+    <form #regForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+            <label>Student Name</label>
+            <input class="form-control" type="text" required name="studentName" [(ngModel)]="student.studentName" #nameInput="ngModel">
+            <small class="error-text" [class.d-none]="nameInput.valid||nameInput.untouched">Invalid Name</small>
+        </div>
+        <div>
+            <label>Email     </label>
+            <input type="email" required email  name="email" [(ngModel)]="student.email" #emailInput="ngModel">
+            <small class="error-text" [class.d-none]="emailInput.valid||emailInput.untouched">Invalid Email</small>
+        </div>
+        <div>
+            <label>Mobile No</label>
+            <input type="text" required pattern="^\d{10}$" name="phone" [(ngModel)]="student.phone" #phoneInput="ngModel">
+            <small class="error-text" [class.d-none]="phoneInput.valid||phoneInput.untouched">10 Digit Mobile No Required</small>
+        </div>
+        <div>
+            <label>Course Name</label>
+            <select name="courseName" [(ngModel)]="student.courseName">
+                <option value="">select Course</option>
+                <option *ngFor="let course of courses" value="{{course}}">{{course}}</option>
+            </select>
+        </div>
+        <div>
+            <label>Select Time Slot</label>
+            <input type="radio" name="slot" value="morning" [(ngModel)]="student.slot" selected><label>Morning Slot</label>
+            <input type="radio" name="slot" value="evening" [(ngModel)]="student.slot"><label>Evening Slot</label>
+        </div>
+        <div>
+            <label>Notify</label>
+            <input type="checkbox" name="notify" [(ngModel)]="student.notify">
+        </div>
+        <div>
+            <button [disabled]="regForm.form.invalid||submitted">Register</button>
+        </div>
+    </form>
+
+    {{student|json}}
+</div>

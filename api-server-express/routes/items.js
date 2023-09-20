@@ -47,7 +47,7 @@ router.post('/', function (req, res) {
     
     // create an object of new Item
     let newItem = {
-        empId: req.body.empId, // generated in above step
+        empId: parseInt(req.body.empId), // generated in above step
         name: req.body.name, // value of `title` get from POST req
         city: req.body.city, // generated in above step
         salary: req.body.salary // default value is set to false
@@ -68,7 +68,7 @@ router.post('/', function (req, res) {
 router.put('/:id', function (req, res) {
     // get item object match by `id`
     let found = data.find(function (item) {
-        return item.id === parseInt(req.params.id);
+        return item.empId === parseInt(req.params.id);
     });
 
     // check if item found
@@ -101,7 +101,7 @@ router.put('/:id', function (req, res) {
 router.delete('/:id', function (req, res) {
     // find item from array of data
     let found = data.find(function (item) {
-        return item.id === parseInt(req.params.id);
+        return item.empId === parseInt(req.params.id);
     });
 
     if (found) {

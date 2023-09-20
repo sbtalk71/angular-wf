@@ -1,9 +1,9 @@
-import { Employee } from "./Demo";
-import { TempEmployee } from "./TempEmployee";
+import { Address, Employee } from "./Demo";
 
-const emp=new Employee(100,'Shantanu',68000);
+
+const address=new Address("123",500079);
+
+const emp=new Employee(100,'Shantanu',68000,address);
 
 console.log(emp.getDetails());
 
-const tempEmp=new TempEmployee(102,'Karan',56000,'good');
-console.log(tempEmp.getDetails());
