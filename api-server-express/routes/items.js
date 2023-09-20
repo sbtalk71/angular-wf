@@ -103,7 +103,7 @@ router.delete('/:id', function (req, res) {
     let found = data.find(function (item) {
         return item.empId === parseInt(req.params.id);
     });
-
+console.log(found);
     if (found) {
         // if item found then find index at which the item is
         // stored in the `data` array
