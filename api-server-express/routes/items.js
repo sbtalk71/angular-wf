@@ -74,7 +74,7 @@ router.put('/:id', function (req, res) {
     // check if item found
     if (found) {
         let updated = {
-            empId: req.body.empId, // generated in above step
+            empId: parseInt(req.body.empId), // generated in above step
         name: req.body.name, // value of `title` get from POST req
         city: req.body.city, // generated in above step
         salary: req.body.salary

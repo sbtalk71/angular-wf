@@ -1,0 +1,27 @@
+<h1>Emp Details</h1>
+<div *ngIf="emp">
+    <h2>Employee Details </h2>
+    <table>
+        <tr>
+            <td>Emp Id</td>
+            <td>{{emp.empId}}</td>
+        </tr>
+        <tr>
+            <td>Emp Name</td>
+            <td>{{emp.name}}</td>
+        </tr>
+        <tr>
+            <td>Emp City</td>
+            <td>{{emp.city}}</td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+    </table>
+</div>
+<!--
+<div *ngIf="!(message=='')">
+    <h2>{{message}}</h2>
+</div>
+-->

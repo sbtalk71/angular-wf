@@ -1,0 +1,23 @@
+<h1> Add Employee Page</h1>
+    <div>
+       <form #addEmpForm="ngForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label>Emp Id</label>
+            <input type="text" name="empId" [(ngModel)]="emp.empId">
+        </div>
+        <div>
+            <label>Name</label>
+            <input type="text" name="name" [(ngModel)]="emp.name">
+        </div>
+        <div>
+            <label>City</label>
+            <input type="text" name="city" [(ngModel)]="emp.city">
+        </div>
+        <div>
+            <label>Salary</label>
+            <input type="text" name="salary" [(ngModel)]="emp.salary">
+        </div>
+        <button>Add Emp</button>
+       </form> 
+    </div>
+

@@ -12,9 +12,6 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app.routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { HomeComponent } from './hr/home/home.component';
-import { MeetupComponent } from './hr/meetup/meetup.component';
-import { ApraisalComponent } from './hr/apraisal/apraisal.component';
 import { DetailsComponent } from './details/details.component';
 import { MyloggerInterceptor } from './mylogger.interceptor';
 
@@ -30,9 +27,6 @@ import { MyloggerInterceptor } from './mylogger.interceptor';
     UpdateEmpComponent,
     PageNotFoundComponent,
     DashboardComponent,
-    HomeComponent,
-    MeetupComponent,
-    ApraisalComponent,
     DetailsComponent
   ],
   imports: [
@@ -49,4 +43,9 @@ import { MyloggerInterceptor } from './mylogger.interceptor';
   }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(){
+    console.log("APP module loaded...");
+  }
+ }
