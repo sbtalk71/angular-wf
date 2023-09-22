@@ -4,6 +4,10 @@ ANgular training for Wells Fargo (11-22 SEPT 2023)
 Pre Test Link:
 https://forms.office.com/r/g98q55Ej85
 
+Feedback: https://forms.office.com/r/qyVKfhVFA8
+
+Post Test: https://forms.office.com/r/tMMR8DGnLE
+
 ##CSS For Emp List aplication
 
 /* HeroesComponent's private CSS styles */
